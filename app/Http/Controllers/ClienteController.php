@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\Cliente;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -14,16 +13,17 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        try {
-            $clientes = Cliente::listaTodosOsClientes();
+        return view('clientes.index');
+    }
 
-            return response()->json($clientes);
-        }catch (\Exception $ex){
-            return response()->json([
-                'status' => 'error',
-                'message' => $ex->getMessage(),
-            ], 500);
-        }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -34,18 +34,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $cliente = new Cliente();
-
-            $novoCliente = $cliente->cadastra((object)$request->all());
-
-            return response()->json($novoCliente, 201);
-        }catch (\Exception $ex){
-            return response()->json([
-                'status' => 'error',
-                'message' => $ex->getMessage(),
-            ], 500);
-        }
+        //
     }
 
     /**
@@ -56,21 +45,19 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        try {
-            $cliente = Cliente::retornaClientePorId($id);
-
-            if(!$cliente)
-                return response()->json(['status' => 'error', 'message' => 'Cliente não encontrado!'], 404);
-
-            return response()->json($cliente);
-        }catch (\Exception $ex){
-            return response()->json([
-                'status' => 'error',
-                'message' => $ex->getMessage(),
-            ], 500);
-        }
+        //
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.
@@ -81,21 +68,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try {
-            $cliente = new Cliente();
-
-            $clienteAtualizado = $cliente->atualiza((object)$request->all(), $id);
-
-            if(!$clienteAtualizado)
-                return response()->json(['status' => 'error', 'message' => 'Não foi possível alterar os dados do cliente pois o id informado não retornou resultado!'], 404);
-
-            return response()->json($clienteAtualizado);
-        }catch (\Exception $ex){
-            return response()->json([
-                'status' => 'error',
-                'message' => $ex->getMessage(),
-            ], 500);
-        }
+        //
     }
 
     /**
@@ -106,18 +79,6 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        try {
-            $cliente = Cliente::deleta($id);
-
-            if(!$cliente)
-                return response()->json(['status' => 'error', 'message' => 'Cliente não encontrado!'], 404);
-
-            return response()->json(['status' => 'success', 'message' => 'Cliente excluído com sucesso.'], 200);
-        }catch (\Exception $ex){
-            return response()->json([
-                'status' => 'error',
-                'message' => $ex->getMessage(),
-            ], 500);
-        }
+        //
     }
 }

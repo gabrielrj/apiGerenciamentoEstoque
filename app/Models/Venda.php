@@ -20,12 +20,12 @@ class Venda extends Model
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
-    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = ['updated_at'];
 
-    protected $appends = ['status', 'data_cadastro', 'data_exclusao'];
+    protected $appends = ['status', 'data_cadastro', 'data_exclusao', 'valor_total'];
 
     public function getStatusAttribute(){
-        return $this->attributes['deleted_at'] == null ? 'Ativo' : 'Excluído';
+        return $this->attributes['deleted_at'] == null ? 'Efetivado' : 'Excluído';
     }
 
     public function getDataCadastroAttribute(){
@@ -36,11 +36,17 @@ class Venda extends Model
         return $this->attributes['deleted_at'] == null ? null : Carbon::createFromFormat('Y-m-d H:i:s', $this->attributes['deleted_at'])->format("d/m/Y H:i");
     }
 
+    public function getValorTotalAttribute(){
+        $valorTotal = $this->itens()->sum('valor_item');
+
+        return 'R$ '.number_format($valorTotal, 2, ',', '.');
+    }
+
     public function itens(){
         return $this->hasMany(ItemVenda::class, 'venda_id');
     }
 
     public function cliente(){
-        return $this->belongsTo(Cliente::class, 'cliente_id');
+        return $this->belongsTo(Cliente::class, 'cliente_id')->withTrashed();
     }
 }

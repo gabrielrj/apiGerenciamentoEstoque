@@ -16,7 +16,7 @@ class Produto extends Model
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-    protected $appends = ['status', 'data_cadastro', 'data_exclusao'];
+    protected $appends = ['status', 'data_cadastro', 'data_exclusao', 'valor_produto_formatado'];
 
     public function getStatusAttribute(){
         return $this->attributes['deleted_at'] == null ? 'Ativo' : 'Excluído';
@@ -30,7 +30,13 @@ class Produto extends Model
         return $this->attributes['deleted_at'] == null ? null : Carbon::createFromFormat('Y-m-d H:i:s', $this->attributes['deleted_at'])->format("d/m/Y H:i");
     }
 
+    public function getValorProdutoFormatadoAttribute(){
+        $valorProduto = $this->attributes['valor_produto'];
+
+        return 'R$ '.number_format($valorProduto, 2, ',', '.');
+    }
+
     public function fornecedor(){
-        return $this->belongsTo(Fornecedor::class, 'fornecedor_id');
+        return $this->belongsTo(Fornecedor::class, 'fornecedor_id')->withTrashed();
     }
 }

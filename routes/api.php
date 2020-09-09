@@ -31,7 +31,7 @@ Route::group(array('prefix' => 'api'), function (){
 });
 */
 
-Route::apiResource('clientes', 'ClienteController');
-Route::apiResource('fornecedores', 'FornecedorController');
-Route::apiResource('produtos', 'ProdutoController');
-Route::apiResource('vendas', 'VendaController');
+Route::apiResource('clientes', 'Api\ClienteController');
+Route::apiResource('fornecedores', 'Api\FornecedorController');
+Route::apiResource('produtos', 'Api\ProdutoController');
+Route::apiResource('vendas', 'Api\VendaController');

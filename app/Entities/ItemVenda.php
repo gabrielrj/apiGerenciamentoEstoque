@@ -52,10 +52,10 @@ class ItemVenda
             Produto::realizaBaixaNoEstoque($produto->id, $item->quantidade_itens);
 
             $itemDeVendaAdicionado = \App\Models\ItemVenda::create([
-                'valor_item' => $produto->valor_produto - ($item->desconto == null ? 0 : $item->desconto),
+                'valor_item' => self::retornaValorDoItemDeVenda($produto->valor_produto, $item->quantidade_itens, $item->desconto),
                 'desconto' => $item->desconto == null ? 0 : $item->desconto,
                 'numero_item' => $numeroItem,
-                'quantidade_itens' => $item->quantidade_itens,
+                'quantidade_itens' => $item->quantidade_itens == null ? 1 : $item->quantidade_itens,
                 'produto_id' => $produto->id,
                 'venda_id' => $vendaId,
             ]);
@@ -79,6 +79,9 @@ class ItemVenda
         return $itemDeVenda->delete();
     }
 
+    private static function retornaValorDoItemDeVenda($valor_produto, $quantidade_de_itens = null, $desconto_total = null){
+        return (($valor_produto * ($quantidade_de_itens == null ? 1 : $quantidade_de_itens)) - ($desconto_total == null ? 0 : $desconto_total));
+    }
 
     private static function produtoExisteNoBancoDeDados($produto){
         return $produto != null;

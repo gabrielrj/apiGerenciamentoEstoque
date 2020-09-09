@@ -1,13 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69fe8a40-ec58-4b06-aac6-204cf3d10d2f" name="Default Changelist" comment="" />
+    <list default="true" id="69fe8a40-ec58-4b06-aac6-204cf3d10d2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/FornecedorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProdutoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/VendaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/materialize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/materialize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/clientes/CadastraOuAlteraClientes.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/clientes/ListaClientes.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/fornecedores/CadastraOuAlteraFornecedores.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/fornecedores/ListaFornecedores.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/produtos/CadastraOuAlteraProdutos.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/produtos/ListaProdutos.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/utils/VAlert.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/utils/VLoading.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/utils/VPaginate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/vendas/CadastraOuAlteraVendas.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/vendas/ListaVendas.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/clientes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/fornecedores/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/produtos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/apiGerenciadorDeEstoque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/apiGerenciadorDeEstoque.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/ItemVenda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/ItemVenda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FornecedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FornecedorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ItemVenda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ItemVenda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Venda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Venda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -15,8 +69,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
@@ -127,22 +187,35 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1h6XnpE913WH6WdHZVKksDhRg5Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\apiGerenciadorDeEstoque\public\css" />
+      <recent name="C:\xampp\htdocs\apiGerenciadorDeEstoque\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\apiGerenciadorDeEstoque\app\Http\Controllers\Api" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -159,13 +232,22 @@
       <option name="presentableId" value="Default" />
       <updated>1599332685273</updated>
       <workItem from="1599332686525" duration="26645000" />
+      <workItem from="1599364457326" duration="210000" />
+      <workItem from="1599575107761" duration="26506000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="-1550" y="-274" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599597376401">
+      <screen x="-2560" y="-540" width="2560" height="1040" />
+    </state>
+    <state x="-1550" y="-274" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599597376401" />
     <state x="-1550" y="-266" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599359441206">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
@@ -174,83 +256,83 @@
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
     <state width="410" height="466" key="DebuggerActiveHint/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599363268949" />
-    <state width="2517" height="348" key="GridCell.Tab.0.bottom" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.0.bottom" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.0.center" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.0.center" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.0.left" timestamp="1599364273109">
+    <state width="2517" height="348" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.0.left" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273109" />
-    <state width="2517" height="348" key="GridCell.Tab.0.right" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.0.right" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.1.bottom" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom" timestamp="1599618554094">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.1.center" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554094" />
+    <state width="2517" height="348" key="GridCell.Tab.1.center" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.1.left" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.1.left" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
-    <state width="2517" height="348" key="GridCell.Tab.1.right" timestamp="1599364273110">
+    <state width="2517" height="348" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
+    <state width="2517" height="348" key="GridCell.Tab.1.right" timestamp="1599618554093">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599364273110" />
+    <state width="2517" height="348" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599618554093" />
     <state x="-1525" y="-298" key="NewPhpClassDialog" timestamp="1599338295202">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
     <state x="-1525" y="-298" key="NewPhpClassDialog/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599338295202" />
-    <state x="-1446" y="-97" key="NewPhpFileDialog" timestamp="1599347213884">
+    <state x="-1446" y="-97" key="NewPhpFileDialog" timestamp="1599599439145">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state x="-1446" y="-97" key="NewPhpFileDialog/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599347213884" />
+    <state x="-1446" y="-97" key="NewPhpFileDialog/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599599439145" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php</url>
-          <line>39</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php</url>
+          <line>40</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php</url>
-          <line>59</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php</url>
+          <line>60</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php</url>
-          <line>84</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php</url>
+          <line>85</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php</url>
-          <line>109</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php</url>
+          <line>110</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ProdutoController.php</url>
+          <line>38</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php</url>
-          <line>17</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/ProdutoController.php</url>
+          <line>18</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/VendaController.php</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/VendaController.php</url>
+          <line>38</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
