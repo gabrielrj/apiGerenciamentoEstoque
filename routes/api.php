@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +31,8 @@ Route::group(array('prefix' => 'api'), function (){
 */
 
 Route::apiResource('clientes', 'Api\ClienteController');
+Route::get('clientes/lista/ativos', 'Api\ClienteController@listaClientesAtivos');
 Route::apiResource('fornecedores', 'Api\FornecedorController');
 Route::apiResource('produtos', 'Api\ProdutoController');
+Route::get('produtos/lista/ativos', 'Api\ProdutoController@listaProdutosAtivos');
 Route::apiResource('vendas', 'Api\VendaController');

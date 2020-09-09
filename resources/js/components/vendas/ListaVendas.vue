@@ -27,7 +27,8 @@
                         <h4 class="col xl6 l6 m6 s12">Lista de vendas cadastradas</h4>
 
                         <div class="col xl6 l6 m6 s12">
-                            <a class="btn-floating indigo light-blue waves-effect waves-light right">
+                            <a class="btn-floating indigo light-blue waves-effect waves-light right"
+                               @click="cadastraNovaVenda">
                                 <i class="material-icons">add</i>
                             </a>
                         </div>
@@ -97,6 +98,8 @@
                                                         <i class="material-icons" v-bind:class="{ 'red-text': filtro.sortPropertyDataExclusao }">sort</i>
                                                     </a>
                                                 </th>
+
+                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -118,7 +121,7 @@
                                                     <ul class="browser-default">
                                                         <li v-for="(item_compra, j) in venda.itens">
                                                             <span>{{item_compra.produto.nome}}</span>
-                                                            &nbsp;&nbsp;-&nbsp;&nbsp;
+                                                            &nbsp;-&nbsp;
                                                             <span class="blue-text text-darken-3">({{item_compra.quantidade_itens}} itens à {{item_compra.valor_item_formatado}} cada.)</span>
                                                         </li>
                                                     </ul>
@@ -128,10 +131,21 @@
                                                     <span>{{venda.valor_total}}</span>
                                                 </td>
 
-                                                <td><span class="new badge" :class="{'green' : venda.status == 'Efetivado', 'red' : venda.status == 'Excluído'}" data-badge-caption="">{{venda.status}}</span></td>
+                                                <td><span class="new badge" :class="{'green' : venda.status == 'Efetivada', 'red' : venda.status == 'Excluída'}" data-badge-caption="">{{venda.status}}</span></td>
 
                                                 <td>
                                                     <span>{{venda.data_exclusao == null ? 'N/a' : venda.data_exclusao}}</span>
+                                                </td>
+
+                                                <td>
+                                                    <a v-if="venda.status == 'Efetivada'"
+                                                       style="cursor: pointer;"
+                                                       data-toggle="tooltip"
+                                                       data-placement="top"
+                                                       title="Excluir"
+                                                       @click="deletaVenda(venda)">
+                                                        <i class="small material-icons red-text">delete</i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -178,6 +192,9 @@
             </div>
         </div>
 
+        <vue-cadastra-altera-vendas ref="cadastra_altera_venda"
+                                      @emissaoDeDadosSalvos="listaVendasCadastradas"></vue-cadastra-altera-vendas>
+
     </div>
 </template>
 
@@ -187,6 +204,8 @@ export default {
     data(){
         return {
             vendasCadastradas: [],
+            clientesAtivos: [],
+            produtosAtivos: [],
             loading: false,
 
             filtro: {
@@ -273,6 +292,27 @@ export default {
                 this.loading = false;
                 this.$refs.alert.abreMensagens(error.response);
             })
+        },
+
+        //Demais métodos da pagina
+        cadastraNovaVenda(){
+            this.$refs.cadastra_altera_venda.cadastraNovaVenda()
+        },
+        deletaVenda(venda){
+            if(confirm('Tem certeza que deseja excluir a venda ' + venda.id + '?')){
+                this.$refs.alert.limpaMensagens()
+                this.loading = true
+
+                axios.delete('api/vendas/' + venda.id).then(response => {
+                    this.loading = false
+                    this.listaVendasCadastradas()
+                    Swal.fire('Ótimo', 'Venda excluída com sucesso.', 'success')
+                }).catch(error => {
+                    this.loading = false
+                    this.$refs.alert.abreMensagens(error.response)
+                    Swal.fire('Oops!.', error.response.data.message, 'error')
+                })
+            }
         },
 
         //Outros métodos da pagina

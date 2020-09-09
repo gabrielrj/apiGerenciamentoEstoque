@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Entities\Cliente;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ClienteStoreAndPutRequestValidation;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -27,13 +28,26 @@ class ClienteController extends Controller
         }
     }
 
+    public function listaClientesAtivos(){
+        try {
+            $clientesAtivos = Cliente::listaTodosOsClientesAtivos();
+
+            return response()->json($clientesAtivos);
+        }catch (\Exception $ex){
+            return response()->json([
+                'status' => 'error',
+                'message' => $ex->getMessage(),
+            ], 500);
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClienteStoreAndPutRequestValidation $request)
     {
         try {
             $cliente = new Cliente();
@@ -80,7 +94,7 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ClienteStoreAndPutRequestValidation $request, $id)
     {
         try {
             $cliente = new Cliente();

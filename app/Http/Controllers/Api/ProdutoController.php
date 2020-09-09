@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Entities\Produto;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProdutoStoreAndPutRequestValidation;
 use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
@@ -27,13 +28,26 @@ class ProdutoController extends Controller
         }
     }
 
+    public function listaProdutosAtivos(){
+        try {
+            $produtosAtivos = Produto::listaTodosOsProdutosAtivos();
+
+            return response()->json($produtosAtivos);
+        }catch (\Exception $ex){
+            return response()->json([
+                'status' => 'error',
+                'message' => $ex->getMessage(),
+            ], 500);
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProdutoStoreAndPutRequestValidation $request)
     {
         try {
             $dadosProduto = (object)$request->all();
@@ -82,7 +96,7 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProdutoStoreAndPutRequestValidation $request, $id)
     {
         try {
             $dadosProduto = (object)$request->all();

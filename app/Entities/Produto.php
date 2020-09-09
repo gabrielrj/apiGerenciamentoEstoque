@@ -13,6 +13,11 @@ class Produto
             ->get();
     }
 
+    public static function listaTodosOsProdutosAtivos(){
+        return \App\Models\Produto::with('fornecedor')
+            ->get();
+    }
+
     public static function listaTodosOsProdutosPorFornecedorId($fornecedorId){
         if(empty($fornecedorId) || $fornecedorId === 0)
             throw new \InvalidArgumentException('O campo Id do fornecedor não pode ser nulo ou zero!');

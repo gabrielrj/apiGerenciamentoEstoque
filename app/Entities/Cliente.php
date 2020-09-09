@@ -14,6 +14,11 @@ class Cliente
             ->get();
     }
 
+    public static function listaTodosOsClientesAtivos(){
+        return \App\Models\Cliente::with('vendas.itens.produto.fornecedor')
+            ->get();
+    }
+
     public static function retornaClientePorId($id){
         if(empty($id) || $id === 0)
             throw new \InvalidArgumentException('O campo Id do cliente não pode ser nulo ou zero!');

@@ -116,7 +116,7 @@
 </template>
 
 <script>
-import {maxLength, minLength, required} from "vuelidate/lib/validators";
+import {maxLength, minLength, email, required} from "vuelidate/lib/validators";
 
 export default {
     name: "CadastraOuAlteraClientes",
@@ -179,6 +179,7 @@ export default {
                     maxLength: maxLength(14)
                 },
                 email: {
+                    email,
                     maxLength: maxLength(256)
                 },
                 telefone: {
@@ -189,10 +190,10 @@ export default {
     },
     methods: {
         sobeParaTopoDaJanela(){
-            $('#modalFormCadastroAgendamento').scrollTop(0)
+            $('#modalCadastroCliente').scrollTop(0)
         },
         desceParaFimDaJanela(){
-            $('#modalFormCadastroAgendamento').scrollTop($('#modalFormCadastroAgendamento').height)
+            $('#modalCadastroCliente').scrollTop($('#modalCadastroCliente').height)
         },
 
         abreJanela() {

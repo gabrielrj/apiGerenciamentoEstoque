@@ -1,61 +1,65 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Projeto GerEstoque
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Projeto de api básico para gerenciamento de estoque.
 
-## About Laravel
+## Tecnologias
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A aplicação é desenvolvida em **Laravel**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Para mais informações, consultar a documentação no site oficial do framework.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   php: >= ^7.2.5
+-   Composer: 1.8.4
+-   Laravel: 7.27.\*
+-   npm: >= 6.9.0
 
-## Learning Laravel
+## Implantação
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   Realizar o _clone_ do projeto.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   Executar o **composer** para a instalação das dependências do php:
 
-## Laravel Sponsors
+    ```
+    $ composer install --optimize-autoloader --no-dev
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+-   Criar o arquivo de definição das variáveis do sistema, o arquivo _.env_ (o arquivo _.env.example_ possui as variáveis e pode ser copiado):
 
-### Premium Partners
+    ```
+    $ cp .env.example .env
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+-   Antes de realizar a migração da base de dados deve-se configurar o arquivo **.env** com as variáveis apontadas pela tabela do arquivo **readme**.
+-   Criar a base de dados conforme os arquivos de migração do projeto. **A base de dados já deve ter sido criada antes da execução do comando**:
 
-## Contributing
+    ```
+    $ php artisan migrate --seed
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Atribuir a chave da aplicação:
 
-## Code of Conduct
+    ```
+    $ php artisan key:generate
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   Configurar o serviço de disponibilização de aplicações.
 
-## Security Vulnerabilities
+-   Fim.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Variáveis principais do arquivo [.env]
 
-## License
+| Variável        | Responsabilidade                                                        | Valor                                                   |
+| --------------- | :---------------------------------------------------------------------- | :------------------------------------------------------ |
+| `APP_DEBUG`     | Permitir ou não reportar o erro encontrado na interface web.            | **Em produção, recomenda-se atribuir o valor [false]**. |
+| `APP_URL`       | Endereço eletrônico pela qual a aplicação irá responder.                | -                                                       |
+| `APP_VERSION`   | Incrementar mais 1 ao valor a cada atualização.                         | -                                                       |
+| `DB_CONNECTION` | Identificação do SGBD: **psql** para _POSTGRES_; **mysql** para _MySQL_ | **mysql**                                                   |
+| `DB_HOST`       | Endereço eletrônico do servidor da base de dados.                       | -                                                       |
+| `DB_PORT`       | Porta do servidor da base de dados (caso não esteja na porta padrão).   | -                                                       |
+| `DB_DATABASE`   | Nome da base de dados.                                                  | **gerenciamento_estoque**                                                       |
+| `DB_USERNAME`   | Usuário do serviço da base de dados.                                    | **root**                                                       |
+| `DB_PASSWORD`   | Senha do usuário do serviço da base de dados.                           | -                                                       |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Observações
+
+-   

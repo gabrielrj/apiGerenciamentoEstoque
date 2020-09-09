@@ -79,7 +79,7 @@ class Venda
 
     public static function deleta($id){
         if(empty($id) || $id === 0)
-            throw new \InvalidArgumentException('O campo Id do venda não pode ser nulo ou zero!');
+            throw new \InvalidArgumentException('O campo Id da venda não pode ser nulo ou zero!');
 
         $venda = self::retornaVendaPorId($id);
 

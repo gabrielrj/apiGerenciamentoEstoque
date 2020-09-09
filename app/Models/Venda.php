@@ -25,7 +25,7 @@ class Venda extends Model
     protected $appends = ['status', 'data_cadastro', 'data_exclusao', 'valor_total'];
 
     public function getStatusAttribute(){
-        return $this->attributes['deleted_at'] == null ? 'Efetivado' : 'Excluído';
+        return $this->attributes['deleted_at'] == null ? 'Efetivada' : 'Excluída';
     }
 
     public function getDataCadastroAttribute(){

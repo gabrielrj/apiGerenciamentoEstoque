@@ -27,7 +27,10 @@
                         <h4 class="col xl6 l6 m6 s12">Lista de produtos cadastrados</h4>
 
                         <div class="col xl6 l6 m6 s12">
-                            <a class="btn-floating indigo light-blue waves-effect waves-light right">
+                            <a class="btn-floating indigo light-blue waves-effect waves-light right"
+                               @click="cadastraNovoProduto"
+                               :title="fornecedoresCadastrados.length == 0 ? 'Não há fornecedores cadastrados para poder adicionar produtos.' : 'Adicionar produto'"
+                               :disabled="fornecedoresCadastrados.length == 0">
                                 <i class="material-icons">add</i>
                             </a>
                         </div>
@@ -117,6 +120,8 @@
                                                         <i class="material-icons" v-bind:class="{ 'red-text': filtro.sortPropertyDataExclusao }">sort</i>
                                                     </a>
                                                 </th>
+
+                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -154,6 +159,25 @@
 
                                                 <td>
                                                     <span>{{produto.data_exclusao == null ? 'N/a' : produto.data_exclusao}}</span>
+                                                </td>
+
+                                                <td>
+                                                    <a style="cursor: pointer;"
+                                                       data-toggle="tooltip"
+                                                       data-placement="top"
+                                                       title="Alterar"
+                                                       @click="editaProduto(produto)">
+                                                        <i class="small material-icons grey-text text-darken-3">edit</i>
+                                                    </a>
+                                                    &nbsp;
+                                                    <a v-if="produto.status == 'Ativo'"
+                                                       style="cursor: pointer;"
+                                                       data-toggle="tooltip"
+                                                       data-placement="top"
+                                                       title="Excluir"
+                                                       @click="deletaProduto(produto)">
+                                                        <i class="small material-icons red-text">delete</i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -200,6 +224,10 @@
             </div>
         </div>
 
+        <vue-cadastra-altera-produtos ref="cadastra_altera_produto"
+                                      :fornecedores-cadastrados="fornecedoresCadastrados"
+                                      @emissaoDeDadosSalvos="listaProdutosCadastrados"></vue-cadastra-altera-produtos>
+
     </div>
 </template>
 
@@ -209,6 +237,7 @@ export default {
     data(){
         return {
             produtosCadastrados: [],
+            fornecedoresCadastrados: [],
             loading: false,
 
             filtro: {
@@ -286,6 +315,7 @@ export default {
     },
     mounted() {
         this.listaProdutosCadastrados()
+        this.listaFornecedoresCadastrados()
     },
     methods: {
         //Busca de dados na api
@@ -302,6 +332,44 @@ export default {
                 this.loading = false;
                 this.$refs.alert.abreMensagens(error.response);
             })
+        },
+        listaFornecedoresCadastrados() {
+            this.$refs.alert.limpaMensagens()
+
+            //this.loading = true
+
+            axios.get('api/fornecedores')
+                .then((response) => {
+                    //this.loading = false;
+                    this.fornecedoresCadastrados = response.data;
+                }).catch(error => {
+                //this.loading = false;
+                this.$refs.alert.abreMensagens(error.response);
+            })
+        },
+
+        //Demais métodos da pagina
+        cadastraNovoProduto(){
+            this.$refs.cadastra_altera_produto.cadastraNovoProduto()
+        },
+        editaProduto(produto){
+            this.$refs.cadastra_altera_produto.editaProduto(produto)
+        },
+        deletaProduto(produto){
+            if(confirm('Tem certeza que deseja excluir o produto ' + produto.nome + '?')){
+                this.$refs.alert.limpaMensagens()
+                this.loading = true
+
+                axios.delete('api/produtos/' + produto.id).then(response => {
+                    this.loading = false
+                    this.listaFornecedoresCadastrados()
+                    Swal.fire('Ótimo', 'Produto excluído com sucesso.', 'success')
+                }).catch(error => {
+                    this.loading = false
+                    this.$refs.alert.abreMensagens(error.response)
+                    Swal.fire('Oops!.', error.response.data.message, 'error')
+                })
+            }
         },
 
         //Métodos da filtragem e paginação

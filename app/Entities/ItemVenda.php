@@ -45,7 +45,7 @@ class ItemVenda
             throw new \Exception('Não é possível concluir a venda pois o produto '.$produto->nome.' encontra-se com estoque zerado!');
         if(!self::quantidadeDeItensDeVendaSolicitadaEMenorQueQuantidadeDoProdutoEmEstoque($produto, $item))
             throw new \Exception('Não é possível concluir a venda pois a quantidade de itens do produto '.$produto->nome.' encontra-se menor que a quantidade solicitada para venda!');
-        if(!self::descontoPraticadoNoItemDeVendaMenorOuIgualQuePrecoDoProduto($produto, $item))
+        if(!self::descontoPraticadoNoItemDeVendaMenorOuIgualQuePrecoTotalDoProduto($produto, $item))
             throw new \Exception('Não é possível concluir a venda pois o desconto praticado na venda do produto '.$produto->nome.' é maior que o valor do produto!');
 
         try {
@@ -55,7 +55,7 @@ class ItemVenda
                 'valor_item' => self::retornaValorDoItemDeVenda($produto->valor_produto, $item->quantidade_itens, $item->desconto),
                 'desconto' => $item->desconto == null ? 0 : $item->desconto,
                 'numero_item' => $numeroItem,
-                'quantidade_itens' => $item->quantidade_itens == null ? 1 : $item->quantidade_itens,
+                'quantidade_itens' => self::retornaQuantidadeDeItensCasoSejaInformadoValorNulo($item),
                 'produto_id' => $produto->id,
                 'venda_id' => $vendaId,
             ]);
@@ -99,7 +99,11 @@ class ItemVenda
         return $produto->quantidade_itens > $itemDeVenda->quantidade_itens;
     }
 
-    private static function descontoPraticadoNoItemDeVendaMenorOuIgualQuePrecoDoProduto($produto, $itemDeVenda){
-        return $itemDeVenda->desconto <= $produto->valor_produto;
+    private static function descontoPraticadoNoItemDeVendaMenorOuIgualQuePrecoTotalDoProduto($produto, $itemDeVenda){
+        return $itemDeVenda->desconto <= ($produto->valor_produto * self::retornaQuantidadeDeItensCasoSejaInformadoValorNulo($itemDeVenda));
+    }
+
+    private static function retornaQuantidadeDeItensCasoSejaInformadoValorNulo($item){
+        return ($item->quantidade_itens == null ? 1 : $item->quantidade_itens);
     }
 }

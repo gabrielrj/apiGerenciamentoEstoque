@@ -16,7 +16,7 @@ class ItemVenda extends Model
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-    protected $appends = ['status', 'data_cadastro', 'data_exclusao', 'valor_item_formatado', 'desconto_formatado'];
+    protected $appends = ['status', 'data_cadastro', 'data_exclusao', 'valor_item_formatado', 'valor_total_formatado', 'desconto_formatado'];
 
     public function getStatusAttribute(){
         return $this->attributes['deleted_at'] == null ? 'Ativo' : 'Excluído';
@@ -30,8 +30,17 @@ class ItemVenda extends Model
         return $this->attributes['deleted_at'] == null ? null : Carbon::createFromFormat('Y-m-d H:i:s', $this->attributes['deleted_at'])->format("d/m/Y H:i");
     }
 
-    public function getValorItemFormatadoAttribute(){
+    public function getValorTotalFormatadoAttribute(){
         $valorItem = $this->attributes['valor_item'];
+
+        return 'R$ '.number_format($valorItem, 2, ',', '.');
+    }
+
+    public function getValorItemFormatadoAttribute(){
+        $valorTotal = $this->attributes['valor_item'];
+        $quantidadeItens = $this->attributes['quantidade_itens'];
+
+        $valorItem = $valorTotal/$quantidadeItens;
 
         return 'R$ '.number_format($valorItem, 2, ',', '.');
     }

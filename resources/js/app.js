@@ -19,7 +19,14 @@ Vue.use(VueTheMask)
 
 import money from 'v-money'
 // register directive v-money and component <money>
-Vue.use(money)
+Vue.use(money, {
+    decimal: ',',
+    thousands: '.',
+    prefix: 'R$ ',
+    suffix: ' #',
+    precision: 2,
+    masked: false
+})
 
 /**
  * The following block of code may be used to automatically register your

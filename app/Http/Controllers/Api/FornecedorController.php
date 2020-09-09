@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Entities\Fornecedor;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FornecedorStoreAndPutRequestValidation;
 use Illuminate\Http\Request;
 
 class FornecedorController extends Controller
@@ -34,7 +35,7 @@ class FornecedorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FornecedorStoreAndPutRequestValidation $request)
     {
         try {
             $fornecedor = new Fornecedor();
@@ -81,7 +82,7 @@ class FornecedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FornecedorStoreAndPutRequestValidation $request, $id)
     {
         try {
             $fornecedor = new Fornecedor();
