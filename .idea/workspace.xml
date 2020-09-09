@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69fe8a40-ec58-4b06-aac6-204cf3d10d2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ClienteStoreAndPutRequestValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/FornecedorStoreAndPutRequestValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProdutoStoreAndPutRequestValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VendaStoreAndPutRequestValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/ItemVenda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/ItemVenda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Venda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Venda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/FornecedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/FornecedorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/VendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/VendaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FornecedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FornecedorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ItemVenda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ItemVenda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Venda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Venda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/clientes/CadastraOuAlteraClientes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/clientes/CadastraOuAlteraClientes.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/fornecedores/CadastraOuAlteraFornecedores.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/fornecedores/CadastraOuAlteraFornecedores.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/produtos/CadastraOuAlteraProdutos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/produtos/CadastraOuAlteraProdutos.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/produtos/ListaProdutos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/produtos/ListaProdutos.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/vendas/CadastraOuAlteraVendas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/vendas/CadastraOuAlteraVendas.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/vendas/ListaVendas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/vendas/ListaVendas.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="69fe8a40-ec58-4b06-aac6-204cf3d10d2f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="127.0.0.1" id="5fe95452-1f92-4e00-8338-f3c194b2a08b" name="127.0.0.1" port="8000" />
@@ -216,7 +179,7 @@
       <workItem from="1599332686525" duration="26645000" />
       <workItem from="1599364457326" duration="210000" />
       <workItem from="1599575107761" duration="26742000" />
-      <workItem from="1599662407121" duration="23427000" />
+      <workItem from="1599662407121" duration="23963000" />
     </task>
     <servers />
   </component>
@@ -239,38 +202,38 @@
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
     <state width="410" height="466" key="DebuggerActiveHint/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599363268949" />
-    <state width="2517" height="348" key="GridCell.Tab.0.bottom" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.0.bottom" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
-    <state width="2517" height="348" key="GridCell.Tab.0.center" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.0.center" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
-    <state width="2517" height="348" key="GridCell.Tab.0.left" timestamp="1599688742113">
+    <state width="2517" height="348" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.0.left" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742113" />
-    <state width="2517" height="348" key="GridCell.Tab.0.right" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.0.right" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
-    <state width="2517" height="348" key="GridCell.Tab.1.bottom" timestamp="1599688742229">
+    <state width="2517" height="348" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom" timestamp="1599690986566">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742229" />
-    <state width="2517" height="348" key="GridCell.Tab.1.center" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986566" />
+    <state width="2517" height="348" key="GridCell.Tab.1.center" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
-    <state width="2517" height="348" key="GridCell.Tab.1.left" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.1.left" timestamp="1599690986565">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
-    <state width="2517" height="348" key="GridCell.Tab.1.right" timestamp="1599688742114">
+    <state width="2517" height="348" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986565" />
+    <state width="2517" height="348" key="GridCell.Tab.1.right" timestamp="1599690986566">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
-    <state width="2517" height="348" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599688742114" />
+    <state width="2517" height="348" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599690986566" />
     <state x="-1525" y="-298" key="NewPhpClassDialog" timestamp="1599338295202">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
@@ -283,6 +246,10 @@
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599673356710" />
+    <state x="-1688" y="-288" key="Vcs.Push.Dialog.v2" timestamp="1599691090512">
+      <screen x="-2560" y="-540" width="2560" height="1040" />
+    </state>
+    <state x="-1688" y="-288" key="Vcs.Push.Dialog.v2/0.0.1366.728/-2560.-540.2560.1040@-2560.-540.2560.1040" timestamp="1599691090512" />
     <state x="-1617" y="-315" width="672" height="678" key="search.everywhere.popup" timestamp="1599679218305">
       <screen x="-2560" y="-540" width="2560" height="1040" />
     </state>

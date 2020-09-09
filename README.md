@@ -60,6 +60,8 @@ Para mais informações, consultar a documentação no site oficial do framework
 | `DB_USERNAME`   | Usuário do serviço da base de dados.                                    | **root**                                                       |
 | `DB_PASSWORD`   | Senha do usuário do serviço da base de dados.                           | -                                                       |
 
-## Observações
+## Link Publico do PostMan 
 
--   
+ Collection com a explicação de como funciona api no postman
+ - https://www.getpostman.com/collections/e610f1c13addd7f48ef2
+   
